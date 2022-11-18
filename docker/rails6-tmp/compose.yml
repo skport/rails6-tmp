@@ -1,0 +1,36 @@
+services:
+  app:
+    container_name: rails6-tmp-app
+    build: .
+    depends_on:
+      - db
+      - adminer
+    volumes:
+      - "../../rails:/rails/"
+    ports:
+      - "3000:3000"
+    tty: true
+    
+  db:
+    container_name: rails6-tmp-mariadb
+    image: mariadb:10.3
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: pass
+    command:
+      --query_cache_type=0
+      --query_cache_limit=0
+      --query_cache_size=0
+      --innodb_file_per_table=1
+      --innodb_buffer_pool_size=128M
+      --innodb_log_file_size=30MB
+      --max_connections=10
+    
+  adminer:
+    container_name: rails6-tmp-adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
