@@ -1,4 +1,13 @@
 # Rails 6 project template
+This is a template project for ruby 2.6 & rails 6.0.
+
+- Docker Container Configuration
+  - app
+    - ruby & rails
+  - db
+    - mariadb
+  - adminer
+    - Database Management in PHP
 
 ## Using Docker
 Move to docker directory:

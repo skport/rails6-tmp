@@ -25,7 +25,7 @@ RUN gem install rails -v 6.0.3 \
     ; \
     bundle install
 
-# Move current directory
+# Move to current directory
 WORKDIR /rails
 
 # Start the Rails server
