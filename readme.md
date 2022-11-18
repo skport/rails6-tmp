@@ -9,7 +9,7 @@ This is a template project for ruby 2.6 & rails 6.0.
   - adminer
     - Database Management in PHP
 
-## Using Docker
+## Usage
 Move to docker directory:
 ```shell
 cd ./docker/rails6-tmp
