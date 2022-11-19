@@ -6,7 +6,9 @@ services:
       - db
       - adminer
     volumes:
-      - "../../rails:/rails/"
+      - type: bind
+        source: "../../rails"
+        target: "/rails"
     ports:
       - "3000:3000"
     tty: true
